@@ -13,7 +13,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class naukriproject {
 	
@@ -33,12 +32,6 @@ public class naukriproject {
          
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
          
-       // WebElement exp = driver.findElement(By.className("dropArrowDD"));
-         
-        // Select sel = new Select(exp) ;
-         
-       //  sel.selectByIndex(1);
-         
          driver.findElement(By.cssSelector("input[placeholder='Enter location']")).sendKeys("Bengaluru");
          
          driver.findElement(By.className("qsbSubmit")).click();
@@ -47,7 +40,7 @@ public class naukriproject {
          
          String parent = driver.getWindowHandle();
          
-         driver.findElement(By.cssSelector("a[title='Quality Assurance and Test Automation Engineer']")).click();
+         driver.findElement(By.xpath("//*[@id=\"root\"]/div[4]/div/div/section[2]/div[2]/article[1]/div[1]/div[1]/a")).click();
          
          Set<String> child = driver.getWindowHandles();
          
