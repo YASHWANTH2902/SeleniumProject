@@ -1,6 +1,5 @@
 package amazon;
 
-import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
